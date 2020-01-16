@@ -178,12 +178,6 @@ type Min struct {
 // IsSatisfied judge whether obj is valid
 // not support int64 on 32-bit platform
 func (m Min) IsSatisfied(obj interface{}) bool {
-
-	fmt.Printf("%T \n", obj)
-
-	a, b := obj.(float64)
-	fmt.Printf("%v %v \n", a, b)
-
 	var v int
 	switch obj.(type) {
 	case int64:
